@@ -1,0 +1,19 @@
+---
+layout: default
+parent_name: برچسب‌ها
+parent_url: '/tags'
+---
+{% assign pagesize = site.posts | where: 'tags', page.short_name | size %}
+{% include breadcrumb.html %}
+{% include headercard.html %}
+
+<section class="bg-light">
+<div class="container">
+  <div id="grid" class="row py-3">
+    {% assign filtered_posts = site.posts | where: 'tags', page.short_name %}
+    {% for post in filtered_posts %}
+    {% include card.html %}
+    {% endfor %}
+  </div>
+</div>
+</section>

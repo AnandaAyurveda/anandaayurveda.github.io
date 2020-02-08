@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% for category in page.categories %}{% assign cat = site.categories | where: 'shortname', category | first %}
+  {% if cat %}
+    {% assign pagecolor = cat.color %}
+    {% assign catname = cat.title %}
+    {% assign caturl = cat.url %}
+  {% endif %}
+{% endfor %}
+{% assign pageUptitle = catname %}
+{% assign pageUpurl = caturl %}
+{% assign pageTitle = page.title %}
+{% assign pageSubtitle = page.subtitle %}
+{% include headercard.html %}
+
+<section>
+
+  <div class="container  py-3">
+    <div class="row">
+    <div class="col-8">
+    </div>
+    <div class="col-4">
+      <img class="img-fluid" src="{{page.coverImg}}" alt="">
+    </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="container">
+     {{content}}
+  </div>
+</div>
+</section>
+{% include footer.html %}

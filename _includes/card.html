@@ -1,0 +1,11 @@
+<div class="col-sm-4 my-2 {{ post.tags | join: ' ' }}">
+<div id="card" class="no-padding " onclick="location.href='{{post.url}}';">
+  <div id="card-text">
+    <div id="card-meta">{% for category in post.categories %}{% assign cat = site.categories | where: 'shortname', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</div>
+    <h2 id="card-title">{{ post.title }}</h2>
+    <p>{{ post.subtitle }}</p>
+  </div>
+
+  <img id="card-image" src="{{post.coverImg}}" />
+</div>
+</div>

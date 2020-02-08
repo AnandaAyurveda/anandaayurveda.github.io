@@ -1,0 +1,6 @@
+- name: درباره
+  link: /about
+- name: بخش‌ها
+  link: /sections
+- name: تماس
+  link: /contact

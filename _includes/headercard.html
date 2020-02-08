@@ -1,0 +1,13 @@
+<section style="background-color: rgb({{pagecolor}}) !important;">
+  <div class="header-inner text-center text-light h-100  d-flex align-items-end d-none justify-content-center pb-5" >
+    {% if pageImg %} <img class="d-block w-100" src="{{pageImg}}" alt="First slide"> {% endif %}
+    <div>
+      {% if pageUptitle %}<p><a href="{{pageUpurl}}">{{ pageUptitle }}</a><p>{% endif %}
+      <h5>{{ pageTitle }}</h5>
+      {% if pageSubtitle %}<p>{{ pageSubtitle }}</p>{% endif %}
+    </div>
+    <div class="hl">
+      {% include hl.svg %}
+    </div>
+  </div>
+</section>

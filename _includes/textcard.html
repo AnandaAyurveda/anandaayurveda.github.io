@@ -1,0 +1,16 @@
+<!-- Card -->
+<div class="col-sm-4">
+<a href="{{cardurl}}">
+  <div id="text-card" class="card card-image m-1" style="background-image: linear-gradient(rgba({{cardcolor}}, 0.1),rgba({{cardcolor}}, 0.9)), url({% if lastpost %}
+{{lastpost.coverImg}}{% endif %});background-color:rgb({{cardcolor}});background-size: cover;">
+    <!-- Content -->
+    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-3 px-2">
+      <div class="dummy"></div>
+      <div class="thumbnail" style="width:100%;">
+        <h3 class="card-title pt-2"><strong>{{cardtitle}}</strong></h3>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+<!-- Card -->

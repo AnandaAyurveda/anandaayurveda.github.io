@@ -1,0 +1,22 @@
+---
+layout: default
+parent_name: موضوعات
+parent_url: '/categories'
+---
+{% assign pagesize = site.posts | where: 'categories', page.shortname | size %}
+{% assign pagecolor = page.color %}
+{% assign pageTitle = page.title %}
+{% assign pageSubtitle = page.subtitle %}
+{% include headercard.html %}
+
+<section class="bg-light">
+<div class="container">
+  <div class="row py-3">
+    {% assign filtered_posts = site.posts | where: 'categories', page.shortname %}
+    {% for post in filtered_posts %}
+    {% include card.html %}
+    {% endfor %}
+  </div>
+</div>
+</section>
+{% include footer.html %}

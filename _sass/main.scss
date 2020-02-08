@@ -1,0 +1,216 @@
+body {
+	font-family: IRANSans !important;
+	font-weight: 300;
+}
+.header-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 30vh;
+  min-height: 290px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.header-inner h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.header-inner p {
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.header-inner a, .header-inner a:visited {
+    color: white !important;
+		text-decoration: underline;
+		font-weight: bold;
+}
+
+.header-inner a:hover, .header-inner a:active {
+    color: white !important;
+		text-decoration: underline;
+		font-weight: bold;
+}
+
+.header-inner .active a {
+    color: white !important;
+		text-decoration: underline;
+		font-weight: bold;
+}
+.carousel-item {
+  height: 50vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-inner>.item {
+	-webkit-transition: -webkit-transform 1.2s ease-in-out !important;
+	-o-transition: -o-transform 1.2s ease-in-out !important;
+	transition: transform 1.2s ease-in-out !important;
+}
+.carousel-caption {
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 75%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff !important;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  background: #fff;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-link {
+  padding: .2rem 1rem;
+}
+
+.nav-link.active,.nav-link:focus{
+  color: #fff;
+}
+
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.hl {
+	position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 5;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: center;
+justify-content: center;
+padding-right: 0;
+list-style: none;
+}
+.dummy {
+    margin-top: 100%;
+}
+.thumbnail {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    text-align:center;
+    padding-top:calc(50% - 30px);
+}
+
+#card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+	height: 412px;
+	cursor: pointer;
+  backface-visibility: hidden;
+}
+
+#card-image {
+  height: 412px;
+  object-fit: cover;
+	width: 100%
+
+}
+
+#card-meta {
+  font-size: em(11);
+  letter-spacing: 1px;
+  &:before {
+    content: '';
+    height: 1px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    backface-visibility: hidden;
+    opacity: 0;
+  }
+}
+
+#card-text {
+  color: #FFF;
+  position: absolute;
+  padding: 10px;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+	margin-left: 15px;
+	background-image: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0));
+	border-radius: inherit;
+}
+
+#card-title {
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: em(30);
+	text-align: right;
+}
+
+#card a {
+  &:hover {
+    .card-text {
+      background-color: rgba(#111, .86);
+      color: #111;
+    }
+    #card-meta {
+      &:before {
+        transform: translate(0,0);
+        background-color: #111;
+        opacity: 1;
+        //@include transition(all 200ms $easeOutQuad);
+      }
+    }
+
+    #card-image {
+      transform: translate(20px,0);
+      //@include transition(all 400ms $easeOutQuad);
+    }
+  }
+}
